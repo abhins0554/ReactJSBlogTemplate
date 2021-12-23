@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+import RouterName from "./Router/RouterName"
+
+import "./App.css";
+import "./fonts/icomoon/style.css";
+import "./css/bootstrap.min.css";
+import "./css/magnific-popup.css";
+import "./css/jquery-ui.css";
+import "./css/owl.carousel.min.css";
+import "./css/owl.theme.default.min.css";
+import "./fonts/flaticon/font/flaticon.css";
+import "./css/style.css";
+import "./css/navstyle.css";
+
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <RouterName />
+    </>
   );
 }
 
