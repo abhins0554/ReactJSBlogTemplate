@@ -15,7 +15,7 @@ function Crousel(props) {
                     Nature
                   </span>
                   <h2 className="mb-4">
-                    <a href="#">
+                    <a href="/blogs/22">
                       The 20 Biggest Fintech Companies In America 2019
                     </a>
                   </h2>
@@ -49,7 +49,7 @@ function Crousel(props) {
                     Nature
                   </span>
                   <h2 className="mb-4">
-                    <a href="#">
+                    <a href="/blogs/22">
                       The 20 Biggest Fintech Companies In America 2019
                     </a>
                   </h2>
