@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../images/logo.png";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -35,7 +34,7 @@ function NavBar() {
       >
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} className="" alt="brand" width={75} height={55} />
+            <img src={'/logo.png'} className="" alt="brand" width={75} height={75} />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="responsive-navbar-nav"

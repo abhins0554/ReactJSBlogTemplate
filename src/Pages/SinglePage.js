@@ -1,44 +1,43 @@
 import React from "react";
 
-import {useLocation} from "react-router-dom";
-
 import Header from "../Component/Header"
 import Footer from "../Component/Footer"
 import PostContent from "../Component/PostContent";
+import moment from "moment";
+
 
 function SinglePage(props) {
-   const location = useLocation();
-   console.log(location.pathname.split('/'));
+
   return (
     <div>
       <Header/>
       <div
         className="site-cover site-cover-sm same-height overlay single-page"
         // style="background-image: url('images/hero_1.jpg');"
-        style={{ backgroundImage: "url('../images/hero_1.jpg" }}
+        style={{ backgroundImage: `url('${localStorage.getItem('imageUrl')}')` }}
       >
         <div className="container">
           <div className="row same-height justify-content-center">
             <div className="col-md-12 col-lg-10">
               <div className="post-entry text-center">
-                <span className="post-category text-white bg-success mb-3">
-                  Nature
-                </span>
                 <h1 className="mb-4">
                   <a href="#">
-                    The 20 Biggest Fintech Companies In America 2019
+                    {localStorage.getItem('title')}
                   </a>
                 </h1>
                 <div className="post-meta align-items-center text-center">
-                  <figure className="author-figure mb-0 mr-3 d-inline-block">
+                  {/* <figure className="author-figure mb-0 mr-3 d-inline-block">
                     <img
                       src="../images/person_1.jpg"
                       alt="Image"
                       className="img-fluid"
                     />
-                  </figure>
-                  <span className="d-inline-block mt-1">By Carrol Atkinson</span>
-                  <span>&nbsp;-&nbsp; February 10, 2019</span>
+                  </figure> */}
+                  <span className="d-inline-block mt-1">By {localStorage.getItem('author')}</span>
+                  <span>&nbsp;-&nbsp; {moment(
+                    localStorage.getItem('date')?.date?.split(",")[0],
+                    "DD MMMM YYYY"
+                  ).format("MMMM DD, YYYY")}</span>
                 </div>
               </div>
             </div>
@@ -50,16 +49,18 @@ function SinglePage(props) {
         <div className="container">
           <div className="row blog-entries element-animate">
             <div className="col-md-12 col-lg-8 main-content">
-              <PostContent data={"dadta"} />
+            <div className="post-content-body">
+                {localStorage.getItem('content')}
+            </div>
 
-              <div className="pt-5">
+              {/* <div className="pt-5">
                 <p>
                   Categories: <a href="#">Food</a>, <a href="#">Travel</a> Tags:{" "}
                   <a href="#">#manila</a>, <a href="#">#asia</a>
                 </p>
-              </div>
+              </div> */}
 
-              <div className="pt-5">
+              {/* <div className="pt-5">
                 <h3 className="mb-5">6 Comments</h3>
                 <ul className="comment-list">
                   <li className="comment">
@@ -249,7 +250,7 @@ function SinglePage(props) {
                     </div>
                   </form>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             <div className="col-md-12 col-lg-4 sidebar">
@@ -268,13 +269,13 @@ function SinglePage(props) {
               </div>
               <div className="sidebar-box">
                 <div className="bio text-center">
-                  <img
+                  {/* <img
                     src="../images/person_2.jpg"
                     alt="Image Placeholder"
                     className="img-fluid mb-5"
-                  />
+                  /> */}
                   <div className="bio-body">
-                    <h2>Craig David</h2>
+                    <h2>{localStorage.getItem('author')}</h2>
                     <p className="mb-4">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Exercitationem facilis sunt repellendus excepturi beatae
@@ -449,7 +450,7 @@ function SinglePage(props) {
         </div>
       </section>
 
-      <section className="py-5">
+      {/* <section className="py-5">
         <div className="container">
           <div className="row">
             <div className="col-md-12">
@@ -576,7 +577,7 @@ function SinglePage(props) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <Footer/>
     </div>
   );
