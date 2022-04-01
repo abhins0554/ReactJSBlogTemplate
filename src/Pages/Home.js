@@ -19,7 +19,7 @@ function Home(props) {
     let all_data1_tech = [];
     let all_data1_scen = [];
     await axios
-      .get("https://inshortsapi.vercel.app/news?category=technology")
+      .get("https://quickblog.tech/news?category=technology")
       .then((response) => {
         for (let i = 0; i < response.data.data.length; i++) {
           if (i < 2) {
@@ -36,7 +36,7 @@ function Home(props) {
       });
 
     await axios
-      .get("https://inshortsapi.vercel.app/news?category=science")
+      .get("https://quickblog.tech/news?category=science")
       .then((response) => {
         for (let i = 0; i < response.data.data.length; i++) {
           if (i < 2) {
