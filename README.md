@@ -1,3 +1,6 @@
+#A theme or template on how to crete a blogging app in React JS with Inshort API for Fetching data.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
